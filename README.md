@@ -76,7 +76,7 @@ roboflow
 
 ---
 
-## 📁 Project Structure
+## 📁 File Structure
 
 ```
 ├── object_detection.ipynb     # Dataset download, YOLOv8 training, ONNX export
