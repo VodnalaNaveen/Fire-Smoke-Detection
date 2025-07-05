@@ -1,1 +1,76 @@
-# Fire-Smoke-Detection
+# 🔥 Fire & Smoke Detection Using YOLOv8
+
+A complete end-to-end **Fire and Smoke Detection System** using **YOLOv8**, trained on a **custom Roboflow dataset**. The model supports detection from **images**, **videos**, and **real-time webcam**. This project also includes **ONNX export** for optimized, cross-platform inference on edge devices.
+
+---
+
+## 📌 Key Features
+
+- ✅ Real-time Fire & Smoke detection  
+- ✅ Trained on custom Roboflow dataset  
+- ✅ Image, Video & Webcam support  
+- ✅ Optimized ONNX export  
+- ✅ Clean, scalable code with Ultralytics YOLOv8  
+
+---
+
+## 📦 Dataset: Roboflow Integration
+
+This project uses a custom-labeled dataset from [Roboflow](https://roboflow.com/) with annotations in YOLOv8 format. Roboflow makes it easy to annotate, version, and export datasets directly into formats supported by modern deep learning frameworks.
+
+---
+
+## 🧠 Model Training (YOLOv8)
+
+A lightweight YOLOv8 variant (`yolo11n.pt`) was used as the base model. It was trained for 50 epochs on the Roboflow dataset using the YOLOv8 training pipeline. After training, the `best.pt` weights were selected for further inference and deployment.
+
+---
+
+## 🔄 Export to ONNX
+
+### ❓ Why Export to ONNX?
+
+Exporting your trained model to **ONNX (Open Neural Network Exchange)** format unlocks powerful deployment capabilities beyond the training environment. ONNX serves as a bridge across different deep learning frameworks and platforms, offering the following benefits:
+
+ - **🚀 Cross-Platform Compatibility**:
+  Run your YOLOv8 model on various platforms like PyTorch, TensorFlow, OpenVINO, or even mobile    and embedded devices with ease.
+
+- **⚡ Hardware-Accelerated Inference**:
+Use hardware-specific runtimes such as TensorRT, OpenVINO, and ONNX Runtime for faster, optimized model inference.
+
+- **📦 Lightweight & Production-Ready**:
+ONNX models are compact, making them ideal for real-time applications and resource-constrained environments.
+
+ - **🔄 Framework Independence**:
+Models exported to ONNX can be used outside of the original framework (like PyTorch or TensorFlow) and still work in other environments like OpenVINO, TensorRT, ONNX Runtime, C++, Java, or Web-based apps
+
+In this project, exporting to ONNX ensures that the fire and smoke detection model is portable, efficient, and scalable for real-world use across multiple platforms.
+
+---
+
+## 🚀 Inference Options
+
+This project supports detection from multiple input sources using the trained YOLOv8 model in ONNX format:
+
+### 📷 Real-Time Webcam Inference
+
+Run the ONNX model directly on your system’s webcam. It captures live frames, performs fire/smoke detection, and displays the annotated output in real time. Optionally, output frames can be saved to disk.
+
+### 🖼️ Image Inference
+
+Detect fire or smoke in static images. The model processes the input image and returns annotated results with bounding boxes and class labels.
+
+### 🎞️ Video Inference
+
+Apply fire and smoke detection to full video files. Each frame is processed individually, and the output can be viewed or saved as a video with annotated detections.
+
+---
+
+## 🧾 Requirements
+
+```
+ultralytics
+opencv-python
+roboflow
+```
+
